@@ -4,34 +4,34 @@
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-**Singer Explorer** adalah aplikasi mobile berbasis Flutter yang berfungsi sebagai ensiklopedia artis/penyanyi populer. Terinspirasi oleh desain UI dan navigasi bersih bergaya ensiklopedia modern, aplikasi ini memungkinkan pengguna menjelajahi profil penyanyi, membaca biografi, melihat daftar lagu populer, serta mengelola artis favorit secara interaktif.
+**Singer Explorer** is a sleek Flutter mobile application designed as an encyclopedia for popular music artists. Inspired by modern, clean encyclopedia and card-based UI designs, the app lets users discover singer profiles, read biographies, browse popular songs, and manage their favorite artists interactively.
 
 ---
 
-## ✨ Fitur Utama
+## ✨ Features
 
-- **📋 Daftar Penyanyi Interaktif (Home Page)**
-  - Menampilkan daftar penyanyi dengan foto profil bulat (*circular avatar*).
-  - Dilengkapi *genre pill badge* yang rapi dan estetis.
-  - Indikator favorit langsung di setiap kartu artis.
-- **🔍 Halaman Detail Lengkap (Detail Page)**
-  - Foto profil artis beresolusi tinggi dengan sudut membulat dan animasi *Hero transition*.
-  - Kartu informasi artis: Nama, Genre, Tanggal Lahir, Kewarganegaraan, dan Masa Aktif.
-  - Biografi singkat artis.
-  - Bagian **Popular Songs** dengan ikon bintang dan desain baris melengkung (*rounded rows*).
-- **❤️ Manajemen Favorit (Favorites)**
-  - Tandai dan hapus artis dari daftar favorit secara *real-time*.
-  - Sinkronisasi status favorit langsung antara Home Page dan Detail Page.
-  - Filter daftar di Home Page untuk menampilkan artis favorit saja.
-- **📱 Desain Responsif & Ramah Pengguna**
-  - Mengikuti pedoman Material 3 dengan palet warna bersih, tipografi tegas, dan minim *shadow*.
-  - Dukungan *scroll* mulus untuk berbagai ukuran layar.
+- **📋 Interactive Singer Catalog (Home Page)**
+  - Vertically scrollable list of artists with circular profile avatars.
+  - Neat rounded genre pill badges.
+  - Heart icon on each item to toggle favorite state instantly.
+- **🔍 Comprehensive Artist Profile (Detail Page)**
+  - High-resolution local profile picture with smooth *Hero transitions*.
+  - Clean card displaying vital info: Name, Genre, Birth Date, Nationality, and Active Since.
+  - Detailed artist biography.
+  - **Popular Songs** section with star icons and rounded list rows.
+- **❤️ Favorites Management**
+  - Instant favorite toggling from both the Home Page and Detail Page.
+  - Fully synchronized state across all views.
+  - App bar favorite filter button to quickly view only favorited artists.
+- **📱 Clean & Responsive UI**
+  - Built with Flutter Material 3 guidelines: subtle borders, pastel badges, and minimal shadows.
+  - Smooth scrolling and adaptive layout across various screen sizes.
 
 ---
 
-## 🌟 Daftar Artis
+## 🌟 Featured Artists
 
-Aplikasi ini memuat data dan profil dari 8 musisi ternama:
+The app includes static curated profiles for 8 popular artists:
 
 1. **Sabrina Carpenter** — *Pop*
 2. **Taylor Swift** — *Pop*
@@ -44,82 +44,82 @@ Aplikasi ini memuat data dan profil dari 8 musisi ternama:
 
 ---
 
-## 📁 Struktur Direktori
+## 📁 Project Structure
 
 ```text
 singer_explorer/
-├── assets/                  # Foto lokal setiap penyanyi (.jpeg)
+├── assets/                  # Local artist portrait images (.jpeg)
 ├── lib/
 │   ├── data/
-│   │   └── singers.dart     # Data statis & biografi 8 artis
+│   │   └── singers.dart     # Static data & biographies for the 8 singers
 │   ├── models/
-│   │   └── singer.dart      # Model data Singer
+│   │   └── singer.dart      # Singer data model
 │   ├── pages/
-│   │   ├── home_page.dart   # Halaman utama dengan daftar penyanyi & filter favorit
-│   │   └── detail_page.dart # Halaman detail profil penyanyi
+│   │   ├── home_page.dart   # Main catalog page with favorites filter
+│   │   └── detail_page.dart # Singer profile & popular songs detail page
 │   ├── widgets/
-│   │   └── singer_card.dart # Komponen kartu penyanyi untuk list view
-│   └── main.dart            # Titik masuk utama aplikasi (MaterialApp & Theme)
+│   │   └── singer_card.dart # Reusable singer list item card
+│   └── main.dart            # Application entry point & theme configuration
 ├── test/
-│   └── widget_test.dart     # Pengujian widget & verifikasi integritas data
-├── pubspec.yaml             # Konfigurasi dependensi dan assets
+│   └── widget_test.dart     # Widget tests & asset integrity verification
+├── pubspec.yaml             # Dependencies and asset declarations
 └── README.md
 ```
 
 ---
 
-## 🚀 Memulai (Getting Started)
+## 🚀 Getting Started
 
-### Prasyarat
+### Prerequisites
 
-Pastikan Anda telah menginstal perangkat berikut pada sistem Anda:
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) (versi 3.12.0 atau lebih baru)
-- Dart SDK (termasuk di dalam Flutter SDK)
-- Android Studio / VS Code dengan ekstensi Flutter & Dart
-- Emulator Android / Simulator iOS / Perangkat fisik dengan USB Debugging aktif
+Ensure you have the following installed on your machine:
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (version 3.12.0 or higher)
+- Dart SDK (bundled with Flutter)
+- Android Studio / VS Code with Flutter and Dart extensions
+- Android Emulator / iOS Simulator / Physical device with USB Debugging enabled
 
-### Langkah Instalasi
+### Installation & Run
 
-1. **Clone repository ini:**
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/username-anda/singer-explorer.git
+   git clone https://github.com/your-username/singer-explorer.git
    cd singer-explorer
    ```
 
-2. **Unduh dependensi Flutter:**
+2. **Install dependencies:**
    ```bash
    flutter pub get
    ```
 
-3. **Jalankan aplikasi:**
+3. **Run the application:**
    ```bash
    flutter run
    ```
 
 ---
 
-## 🧪 Pengujian (Testing)
+## 🧪 Testing
 
-Untuk menjalankan analisis kode dan pengujian otomatis:
+To run the automated test suite and static code analysis:
 
 ```bash
-# Analisis linter dan kode Dart
+# Run code analysis
 flutter analyze
 
-# Menjalankan unit & widget test
+# Run unit & widget tests
 flutter test
 ```
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Built With
 
 - **Framework**: [Flutter](https://flutter.dev/)
-- **Bahasa**: [Dart](https://dart.dev/)
-- **UI & State**: Standard Flutter Widgets & Clean State Management
+- **Language**: [Dart](https://dart.dev/)
+- **State Management**: Clean standard Flutter stateful management
 
 ---
 
-## 📄 Lisensi
+## 📄 License
 
-Proyek ini dibuat untuk tujuan edukasi dan portofolio. Didistribusikan di bawah lisensi [MIT](LICENSE).
+This project is created for educational and portfolio purposes. Distributed under the [MIT](LICENSE) License.
