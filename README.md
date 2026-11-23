@@ -4,6 +4,8 @@
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
+> 🌐 **Live demo (web):** https://qaidy.github.io/Singer-Explorer/
+
 **Singer Explorer** is a sleek Flutter mobile application designed as an encyclopedia for popular music artists. Inspired by modern, clean encyclopedia and card-based UI designs, the app lets users discover singer profiles, read biographies, browse popular songs, and manage their favorite artists interactively.
 
 ---
@@ -95,6 +97,36 @@ Ensure you have the following installed on your machine:
    ```bash
    flutter run
    ```
+
+### Run on the web
+
+```bash
+flutter run -d chrome
+```
+
+### Build for production (web)
+
+```bash
+flutter build web --release --base-href /Singer-Explorer/
+```
+
+The output is generated in `build/web`.
+
+---
+
+## 🌍 Deployment
+
+This project is deployed automatically to **GitHub Pages** via GitHub Actions
+(`.github/workflows/deploy-web.yml`). Every push to `main` builds the web
+release and publishes it to:
+
+**https://qaidy.github.io/Singer-Explorer/**
+
+To enable it on a fork or a fresh clone:
+
+1. Push the repository to GitHub.
+2. Open **Settings → Pages** and set **Source** to **GitHub Actions**.
+3. Push to `main` (or run the *Deploy Web to GitHub Pages* workflow manually).
 
 ---
 
